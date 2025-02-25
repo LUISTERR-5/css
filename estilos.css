@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "cabecera cabecera"
+        "menu menu"
+        "contenido barra-lateral"
+        "pie-pagina pie-pagina";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 80px 40px auto 40px;
+    height: 100vh;
+    gap: 5px;
+    background: #dcdcdc;
+    padding: 10px;
+}
+
+.cabecera {
+    grid-area: cabecera;
+    background: red;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.menu {
+    grid-area: menu;
+    background: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.menu a {
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.contenido {
+    grid-area: contenido;
+    background: green;
+    color: white;
+    padding: 20px;
+}
+
+.contenido article {
+    background: white;
+    color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.barra-lateral {
+    grid-area: barra-lateral;
+    background: orange;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.barra-lateral input {
+    width: 80%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.pie-pagina {
+    grid-area: pie-pagina;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
